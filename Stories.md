@@ -10,8 +10,8 @@
 | 8   | Als ein User sollte es möglich sein zu filtern ob bereits gekaufte items angezeigt werden sollen, oder nicht, damit ich schneller die Dinge finde, die ich noch kaufen muss.                              | HOCJ | SH       | TODO   |
 | 9   | Als ein User wäre es gut für die Einträge Bilder zur Verfügung zu haben, damit ich weiß wie das Produkt aussieht, dass ich suche.                                                                         | DAMP | NTH      | TODO   |
 | 10  | Als ein User wäre es gut die Möglichkeit zu haben den Text als Markdown zu formatieren und formatiert anzeigen zu lassen, damit mir mehr Möglichkeiten zum formattieren meiner Notiz zur Verfügung steht. | ELIP | NTH      | TODO   |
-| 11  | Als ein User möchte ich dass meine Artikel und deren Zustand sobald ich online bin mit allen anderen Usern synchronisiert werden, damit ich weiß falls eine Änderung an der Liste durchgeführt wurde.     | DAMP | SH       | TODO   |
-| 12  | Als ein User will ich die Enträge in meiner Einkaufsliste auch sehen, wenn ich keine Internetverbindung habe.                                                                                             | HOCJ | SH       | TODO   |
+| 11  | Als ein User möchte ich dass meine Artikel und deren Zustand sobald ich online bin mit allen anderen Usern synchronisiert werden, damit ich weiß falls eine Änderung an der Liste durchgeführt wurde.     | DAMP | MH       | TODO   |
+| 12  | Als ein User will ich die Einträge in meiner Einkaufsliste auch sehen, wenn ich keine Internetverbindung habe.                                                                                            | HOCJ | MH       | TODO   |
 
 ## Stories
 
