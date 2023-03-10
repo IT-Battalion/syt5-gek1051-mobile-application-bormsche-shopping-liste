@@ -34,167 +34,69 @@ Gekauft-Status aufgelistet sehen, damit ich weiß was ich einkaufen muss.
 
 Jonas Hochsteger
 
+**Estimate**
+
+3
+
 **Priority**
 
 Must-Have
 
-
-
-### Produktbilder
+## Gekauft setzen
 
 **ID**
 
-9
+2
 
 **Description**
 
-Als ein User wäre es gut für die Einträge Bilder zur Verfügung zu 
-haben, damit ich weiß wie das Produkt aussieht, dass ich suche.
+Als ein User kann ich den Status eines Eintrags auf gekauft setzen damit ich weiß was ich alles schon eingekauft habe.
 
 **Acceptance Criteria**
 
-- Beim Erstellen von einem Produkt kann genau ein Bild mit hochgeladen werden.
-- Das Bild ist in der Detailansicht sichtbar.
+- Ein Produkt soll durch einmaliges klicken auf einen Runden Kreis als "gekauft" makiert werden.  
+
+- Gekaufte Produkte sollen dann anders dargestellt werden (durchgestrichen & abgedunkelt)
+
+**Assignee**
+
+Patrick Elias
+
+**Estimate**
+
+2
+
+**Priority**
+
+Must-Have
+
+### Detailansicht ansehen
+
+**ID**
+
+3
+
+**Description**
+
+Als ein User kann ich mir zu einem Produkt alle 
+Produktinformationen in der Detailansicht ansehen, damit ich weiß was 
+ich einkaufe.
+
+**Acceptance Criteria**
+
+Produktinformationen umfassen: Produktname, Anzahl, Notiz (falls vorhanden) und Gekauft-Status
 
 **Assignee**
 
 Philip Damianik
 
-**Priority**
+**Estimate**
 
-Nice-To-Have
-
-
-
-### Notizen in Markdown
-
-**ID**
-
-10
-
-**Description**
-
-Als ein User wäre es gut die Möglichkeit zu haben den Text als 
-Markdown zu formatieren und formatiert anzeigen zu lassen, damit mir 
-mehr Möglichkeiten zum formattieren meiner Notiz zur Verfügung steht.
-
-**Acceptance Criteria**
-
-- Notizen werden in Markdown angezeigt.
-
-**Assignee**
-
-Patrick Elias
-
-**Priority**
-
-Nice-ToHave
-
-
-
-### Eintrag löschen
-
-**ID**
-
-5
-
-**Description**
-
-Als ein User kann ich einen Eintrag über die Detailansicht löschen,
- damit ich die Items die ich nicht mehr kaufe meine Ansicht versperren.
-
-**Acceptance Criteria**
-
-- Einträge werden nicht mehr angezeigt.
-- Aus Konsistenz gründen bleibt der Eintrag trotzdem in der Datenbank vorhanden
-
-**Assignee**
-
-Patrick Elias
+4
 
 **Priority**
 
 Must-Have
-
-
-
-### Gekauft status filtern
-
-**ID**
-
-8
-
-**Description**
-
-Als ein User sollte es möglich sein zu filtern ob bereits gekaufte 
-items angezeigt werden sollen, oder nicht, damit ich schneller die Dinge
- finde, die ich noch kaufen muss.
-
-**Acceptance Criteria**
-
-Nicht gekaufte und gekaufte Produkte werden je nach Einstellung des Filters oben oder unten angezeigt.
-
-**Assignee**
-
-Jonas Hochsteger
-
-**Priority**
-
-Should-Have
-
-
-
-### Authentication
-
-**ID**
-
-7
-
-**Description**
-
-Als ein User sollte es möglich sein sich anzumelden, damit nicht jeder meine Einkaufsliste bearbeiten kann.
-
-**Acceptance Criteria**
-
-- Der Benutzer gibt einen Token an um sich zu authentifizieren.  
-
-- Tokens müssen manuell generiert werden.
-
-**Assignee**
-
-Patrick Elias
-
-**Priority**
-
-Should-Have
-
-
-
-### Eintrag bearbeiten
-
-**ID**
-
-6
-
-**Description**
-
-Als ein User kann ich einen Eintrag über die Detailansicht bearbeiten, damit ich Änderungen an den Produkten vornehmen kann.
-
-**Acceptance Criteria**
-
-- Sämtliche Produktdaten, welche beim Erstellen benötigt werden, können bearbeitet werden.
-- Alle Eingaben werden erneut validiert.
-- Die Änderungen sind nach einem klick auf "speichern" sofort sichtbar.
-
-**Assignee**
-
-Philip Damianik
-
-**Priority**
-
-Must-Have
-
-
 
 ### Neuen Eintrag erstellen
 
@@ -220,63 +122,181 @@ damit ich neue Dinge auf meine Einkaufsliste setzen kann.
 
 Jonas Hochsteger
 
+**Estimate**
+
+5
+
 **Priority**
 
 Must-Have
 
-
-
-## Gekauft setzen
+### Eintrag löschen
 
 **ID**
 
-2
+5
 
 **Description**
 
-Als ein User kann ich den Status eines Eintrags auf gekauft setzen damit ich weiß was ich alles schon eingekauft habe.
+Als ein User kann ich einen Eintrag über die Detailansicht löschen,
+ damit ich die Items die ich nicht mehr kaufe meine Ansicht versperren.
 
 **Acceptance Criteria**
 
-- Ein Produkt soll durch einmaliges klicken auf einen Runden Kreis als "gekauft" makiert werden.  
-
-- Gekaufte Produkte sollen dann anders dargestellt werden (durchgestrichen & abgedunkelt)
+- Einträge werden nicht mehr angezeigt.
+- Aus Konsistenz gründen bleibt der Eintrag trotzdem in der Datenbank vorhanden
 
 **Assignee**
 
 Patrick Elias
 
+**Estimate**
+
+2
+
 **Priority**
 
 Must-Have
 
-
-
-### Detailansicht ansehen
+### Eintrag bearbeiten
 
 **ID**
 
-3
+6
 
 **Description**
 
-Als ein User kann ich mir zu einem Produkt alle 
-Produktinformationen in der Detailansicht ansehen, damit ich weiß was 
-ich einkaufe.
+Als ein User kann ich einen Eintrag über die Detailansicht bearbeiten, damit ich Änderungen an den Produkten vornehmen kann.
 
 **Acceptance Criteria**
 
-Produktinformationen umfassen: Produktname, Anzahl, Notiz (falls vorhanden) und Gekauft-Status
+- Sämtliche Produktdaten, welche beim Erstellen benötigt werden, können bearbeitet werden.
+- Alle Eingaben werden erneut validiert.
+- Die Änderungen sind nach einem klick auf "speichern" sofort sichtbar.
 
 **Assignee**
 
 Philip Damianik
 
+**Estimate**
+
+3
+
 **Priority**
 
 Must-Have
 
+### Authentication
 
+**ID**
+
+7
+
+**Description**
+
+Als ein User sollte es möglich sein sich anzumelden, damit nicht jeder meine Einkaufsliste bearbeiten kann.
+
+**Acceptance Criteria**
+
+- Der Benutzer gibt einen Token an um sich zu authentifizieren.  
+
+- Tokens müssen manuell generiert werden.
+
+**Assignee**
+
+Patrick Elias
+
+**Estimate**
+
+8
+
+**Priority**
+
+Should-Have
+
+### Gekauft status filtern
+
+**ID**
+
+8
+
+**Description**
+
+Als ein User sollte es möglich sein zu filtern ob bereits gekaufte 
+items angezeigt werden sollen, oder nicht, damit ich schneller die Dinge
+ finde, die ich noch kaufen muss.
+
+**Acceptance Criteria**
+
+Nicht gekaufte und gekaufte Produkte werden je nach Einstellung des Filters oben oder unten angezeigt.
+
+**Assignee**
+
+Jonas Hochsteger
+
+**Estimate**
+
+3
+
+**Priority**
+
+Should-Have
+
+### Produktbilder
+
+**ID**
+
+9
+
+**Description**
+
+Als ein User wäre es gut für die Einträge Bilder zur Verfügung zu 
+haben, damit ich weiß wie das Produkt aussieht, dass ich suche.
+
+**Acceptance Criteria**
+
+- Beim Erstellen von einem Produkt kann genau ein Bild mit hochgeladen werden.
+- Das Bild ist in der Detailansicht sichtbar.
+
+**Assignee**
+
+Philip Damianik
+
+**Estimate**
+
+6
+
+**Priority**
+
+Nice-To-Have
+
+### Notizen in Markdown
+
+**ID**
+
+10
+
+**Description**
+
+Als ein User wäre es gut die Möglichkeit zu haben den Text als 
+Markdown zu formatieren und formatiert anzeigen zu lassen, damit mir 
+mehr Möglichkeiten zum formattieren meiner Notiz zur Verfügung steht.
+
+**Acceptance Criteria**
+
+- Notizen werden in Markdown angezeigt.
+
+**Assignee**
+
+Patrick Elias
+
+**Estimate**
+
+4
+
+**Priority**
+
+Nice-ToHave
 
 ### Synchronisation
 
@@ -298,11 +318,13 @@ weiß falls eine Änderung an der Liste durchgeführt wurde.
 
 Philip Damianik
 
+**Estimate**
+
+8
+
 **Priority**
 
 Must-Have
-
-
 
 ### Offline Verfügbarkeit
 
@@ -321,6 +343,10 @@ Offline verfügbarkeit des letzten Online-Stands der Daten ist gegeben
 **Assignee**
 
 Jonas Hochsteger
+
+**Estimate**
+
+4
 
 **Priority**
 
