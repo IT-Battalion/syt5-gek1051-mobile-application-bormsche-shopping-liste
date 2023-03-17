@@ -1,14 +1,14 @@
-| ID  | Story                                                                                                                                                                                                     | Head | Priority | Complexity | Status | Issue |
-|-----|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------|----------|------------|--------|-------|
-| 1   | Als User möchte ich die Informationen  Produktname, Anzahl und Gekauft-Status aufgelistet sehen, damit ich weiß was ich einkaufen muss.                                                              | HOCJ | MH       | 30 Minuten | TODO   | [#1](https://github.com/TGM-HIT/syt5-gek1051-mobile-application-bormsche-shopping-liste/issues/1) |
-| 2   | Als User kann ich den Status eines Eintrags auf gekauft setzen damit ich weiß was ich alles schon eingekauft habe.                                                                                    | ELIP | MH       | 20 Minuten | TODO   | [#2](https://github.com/TGM-HIT/syt5-gek1051-mobile-application-bormsche-shopping-liste/issues/2) |
-| 3   | Als User kann ich mir zu einem Produkt alle Produktinformationen in der Detailansicht ansehen, damit ich weiß was ich einkaufe.                                                                       | DAMP | MH       | 40 Minuten | TODO   | [#3](https://github.com/TGM-HIT/syt5-gek1051-mobile-application-bormsche-shopping-liste/issues/3) |
-| 4   | Als User kann ich einen neuen Eintrag mit den Informationen Produktname, Anzahl, Notizen (optional) erstellen, damit ich neue Dinge auf meine Einkaufsliste setzen kann.           | HOCJ | MH       | 50 Minuten | TODO   | [#4](https://github.com/TGM-HIT/syt5-gek1051-mobile-application-bormsche-shopping-liste/issues/4) |
-| 5   | Als User kann ich einen Eintrag über die Detailansicht löschen, damit die Items die ich nicht mehr kaufe meine Ansicht nicht versperren.                                                               | ELIP | MH       | 20 Minuten | TODO   | [#5](https://github.com/TGM-HIT/syt5-gek1051-mobile-application-bormsche-shopping-liste/issues/5) |
-| 6   | Als User kann ich einen Eintrag über die Detailansicht bearbeiten, damit ich Änderungen an den Produkten vornehmen kann.                                                                              | DAMP | MH       | 30 Minuten | TODO   | [#6](https://github.com/TGM-HIT/syt5-gek1051-mobile-application-bormsche-shopping-liste/issues/6) |
-| 7   | Als User sollte es möglich sein sich anzumelden, damit nicht jeder meine Einkaufsliste bearbeiten kann.                                                                                               | ELIP | SH       | 80 Minuten | TODO   | [#7](https://github.com/TGM-HIT/syt5-gek1051-mobile-application-bormsche-shopping-liste/issues/7) |
-| 8   | Als User sollte es möglich sein zu filtern ob bereits gekaufte items angezeigt werden sollen, oder nicht, damit ich schneller die Dinge finde, die ich noch kaufen muss.                              | HOCJ | SH       | 30 Minuten | TODO   | [#8](https://github.com/TGM-HIT/syt5-gek1051-mobile-application-bormsche-shopping-liste/issues/8) |
-| 9   | Als User wäre es gut für die Einträge Bilder zur Verfügung zu haben, damit ich weiß wie das Produkt aussieht, dass ich suche.                                                                         | DAMP | NTH      | 60 Minuten | TODO   | [#9](https://github.com/TGM-HIT/syt5-gek1051-mobile-application-bormsche-shopping-liste/issues/9) |
+| ID  | Story                                                                                                                                                                                                 | Head | Priority | Complexity | Status | Issue                                                                                               |
+|-----|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------|----------|------------|--------|-----------------------------------------------------------------------------------------------------|
+| 1   | Als User möchte ich die Informationen  Produktname, Anzahl und Gekauft-Status aufgelistet sehen, damit ich weiß was ich einkaufen muss.                                                               | HOCJ | MH       | 30 Minuten | TODO   | [#1](https://github.com/TGM-HIT/syt5-gek1051-mobile-application-bormsche-shopping-liste/issues/1)   |
+| 2   | Als User kann ich den Status eines Eintrags auf gekauft setzen damit ich weiß was ich alles schon eingekauft habe.                                                                                    | ELIP | MH       | 20 Minuten | TODO   | [#2](https://github.com/TGM-HIT/syt5-gek1051-mobile-application-bormsche-shopping-liste/issues/2)   |
+| 3   | Als User kann ich mir zu einem Produkt alle Produktinformationen in der Detailansicht ansehen, damit ich weiß was ich einkaufe.                                                                       | DAMP | MH       | 40 Minuten | TODO   | [#3](https://github.com/TGM-HIT/syt5-gek1051-mobile-application-bormsche-shopping-liste/issues/3)   |
+| 4   | Als User kann ich einen neuen Eintrag mit den Informationen Produktname, Anzahl, Notizen (optional) erstellen, damit ich neue Dinge auf meine Einkaufsliste setzen kann.                              | HOCJ | MH       | 50 Minuten | TODO   | [#4](https://github.com/TGM-HIT/syt5-gek1051-mobile-application-bormsche-shopping-liste/issues/4)   |
+| 5   | Als User kann ich einen Eintrag über die Detailansicht löschen, damit die Items die ich nicht mehr kaufe meine Ansicht nicht versperren.                                                              | ELIP | MH       | 20 Minuten | TODO   | [#5](https://github.com/TGM-HIT/syt5-gek1051-mobile-application-bormsche-shopping-liste/issues/5)   |
+| 6   | Als User kann ich einen Eintrag über die Detailansicht bearbeiten, damit ich Änderungen an den Produkten vornehmen kann.                                                                              | DAMP | MH       | 30 Minuten | TODO   | [#6](https://github.com/TGM-HIT/syt5-gek1051-mobile-application-bormsche-shopping-liste/issues/6)   |
+| 7   | Als User sollte es möglich sein sich anzumelden, damit nicht jeder meine Einkaufsliste bearbeiten kann.                                                                                               | ELIP | SH       | 80 Minuten | TODO   | [#7](https://github.com/TGM-HIT/syt5-gek1051-mobile-application-bormsche-shopping-liste/issues/7)   |
+| 8   | Als User sollte es möglich sein zu filtern ob bereits gekaufte items angezeigt werden sollen, oder nicht, damit ich schneller die Dinge finde, die ich noch kaufen muss.                              | HOCJ | SH       | 30 Minuten | TODO   | [#8](https://github.com/TGM-HIT/syt5-gek1051-mobile-application-bormsche-shopping-liste/issues/8)   |
+| 9   | Als User wäre es gut für die Einträge Bilder zur Verfügung zu haben, damit ich weiß wie das Produkt aussieht, dass ich suche.                                                                         | DAMP | NTH      | 60 Minuten | TODO   | [#9](https://github.com/TGM-HIT/syt5-gek1051-mobile-application-bormsche-shopping-liste/issues/9)   |
 | 10  | Als User wäre es gut die Möglichkeit zu haben den Text als Markdown zu formatieren und formatiert anzeigen zu lassen, damit mir mehr Möglichkeiten zum formattieren meiner Notiz zur Verfügung steht. | ELIP | NTH      | 40 Minuten | TODO   | [#10](https://github.com/TGM-HIT/syt5-gek1051-mobile-application-bormsche-shopping-liste/issues/10) |
 | 11  | Als User möchte ich dass meine Artikel und deren Zustand sobald ich online bin mit allen anderen Usern synchronisiert werden, damit ich weiß falls eine Änderung an der Liste durchgeführt wurde.     | DAMP | MH       | 80 Minuten | TODO   | [#11](https://github.com/TGM-HIT/syt5-gek1051-mobile-application-bormsche-shopping-liste/issues/11) |
 | 12  | Als User will ich die Einträge in meiner Einkaufsliste auch sehen, wenn ich keine Internetverbindung habe.                                                                                            | HOCJ | MH       | 40 Minuten | TODO   | [#12](https://github.com/TGM-HIT/syt5-gek1051-mobile-application-bormsche-shopping-liste/issues/12) |
@@ -23,7 +23,7 @@
 
 **Description**
 
-Als User möchte ich die Informationen Produktname, Anzahl und 
+Als User möchte ich die Informationen Produktname, Anzahl und
 Gekauft-Status aufgelistet sehen, damit ich weiß was ich einkaufen muss.
 
 **Acceptance Criteria**
@@ -54,7 +54,7 @@ Als User kann ich den Status eines Eintrags auf gekauft setzen damit ich weiß w
 
 **Acceptance Criteria**
 
-- Ein Produkt soll durch einmaliges klicken auf einen Runden Kreis als "gekauft" makiert werden.  
+- Ein Produkt soll durch einmaliges klicken auf einen Runden Kreis als "gekauft" makiert werden.
 
 - Gekaufte Produkte sollen dann anders dargestellt werden (durchgestrichen & abgedunkelt)
 
@@ -78,13 +78,13 @@ Must-Have
 
 **Description**
 
-Als User kann ich mir zu einem Produkt alle 
-Produktinformationen in der Detailansicht ansehen, damit ich weiß was 
+Als User kann ich mir zu einem Produkt alle
+Produktinformationen in der Detailansicht ansehen, damit ich weiß was
 ich einkaufe.
 
 **Acceptance Criteria**
 
-Produktinformationen umfassen: Produktname, Anzahl, Notiz (falls vorhanden) und Gekauft-Status
+Produktinformationen umfassen:Produktname, Anzahl, Notiz (falls vorhanden) und Gekauft-Status
 
 **Assignee**
 
@@ -106,13 +106,13 @@ Must-Have
 
 **Description**
 
-Als User kann ich einen neuen Eintrag mit den Informationen 
-Produktname, Anzahl, Notizen (optional) erstellen, 
+Als User kann ich einen neuen Eintrag mit den Informationen
+Produktname, Anzahl, Notizen (optional) erstellen,
 damit ich neue Dinge auf meine Einkaufsliste setzen kann.
 
 **Acceptance Criteria**
 
-- Alle oben genannten Prameter können gesetzt werden  
+- Alle oben genannten Prameter können gesetzt werden
 
 - Alle oben genannten Parameter werden validiert. (im Epic beschrieben)
 
@@ -139,7 +139,7 @@ Must-Have
 **Description**
 
 Als User kann ich einen Eintrag über die Detailansicht von der Ansicht entfernen,
- damit die Items die ich nicht mehr kaufe meine Ansicht nicht versperren.
+damit die Items die ich nicht mehr kaufe meine Ansicht nicht versperren.
 
 **Acceptance Criteria**
 
@@ -198,7 +198,7 @@ Als User sollte es möglich sein sich anzumelden, damit nicht jeder meine Einkau
 
 **Acceptance Criteria**
 
-- Der Benutzer gibt einen Token an um sich zu authentifizieren.  
+- Der Benutzer gibt einen Token an um sich zu authentifizieren.
 
 - Tokens müssen manuell generiert werden.
 
@@ -222,9 +222,9 @@ Should-Have
 
 **Description**
 
-Als User sollte es möglich sein zu filtern ob bereits gekaufte 
+Als User sollte es möglich sein zu filtern ob bereits gekaufte
 items angezeigt werden sollen, oder nicht, damit ich schneller die Dinge
- finde, die ich noch kaufen muss.
+finde, die ich noch kaufen muss.
 
 **Acceptance Criteria**
 
@@ -250,7 +250,7 @@ Should-Have
 
 **Description**
 
-Als User wäre es gut für die Einträge Bilder zur Verfügung zu 
+Als User wäre es gut für die Einträge Bilder zur Verfügung zu
 haben, damit ich weiß wie das Produkt aussieht, dass ich suche.
 
 **Acceptance Criteria**
@@ -278,8 +278,8 @@ Nice-To-Have
 
 **Description**
 
-Als User wäre es gut die Möglichkeit zu haben den Text als 
-Markdown zu formatieren und formatiert anzeigen zu lassen, damit mir 
+Als User wäre es gut die Möglichkeit zu haben den Text als
+Markdown zu formatieren und formatiert anzeigen zu lassen, damit mir
 mehr Möglichkeiten zum formattieren meiner Notiz zur Verfügung steht.
 
 **Acceptance Criteria**
@@ -307,7 +307,7 @@ Nice-ToHave
 **Description**
 
 Als User möchte ich dass meine Artikel und deren Zustand sobald
- ich online bin mit allen anderen Usern synchronisiert werden, damit ich 
+ich online bin mit allen anderen Usern synchronisiert werden, damit ich
 weiß falls eine Änderung an der Liste durchgeführt wurde.
 
 **Acceptance Criteria**
