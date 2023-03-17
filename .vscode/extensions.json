@@ -1,0 +1,14 @@
+{
+	"recommendations": [
+		"formulahendry.auto-complete-tag",
+		"bierner.color-info",
+		"dbaeumer.vscode-eslint",
+		"christian-kohler.npm-intellisense",
+		"esbenp.prettier-vscode",
+		"pivaszbs.svelte-autoimport",
+		"svelte.svelte-vscode",
+		"bradlc.vscode-tailwindcss",
+		"ZixuanChen.vitest-explorer",
+		"ms-playwright.playwright"
+	]
+}
