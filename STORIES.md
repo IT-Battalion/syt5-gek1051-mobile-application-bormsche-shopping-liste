@@ -12,6 +12,7 @@
 | 10  | Als User wäre es gut die Möglichkeit zu haben den Text als Markdown zu formatieren und formatiert anzeigen zu lassen, damit mir mehr Möglichkeiten zum formatieren meiner Notiz zur Verfügung steht. | ELIP | NTH      | 40 Minuten | TODO   | [#10](https://github.com/TGM-HIT/syt5-gek1051-mobile-application-bormsche-shopping-liste/issues/10) |
 | 11  | Als User möchte ich dass meine Artikel und deren Zustand sobald ich online bin mit allen anderen Usern synchronisiert werden, damit ich weiß falls eine Änderung an der Liste durchgeführt wurde.    | DAMP | MH       | 80 Minuten | TODO   | [#11](https://github.com/TGM-HIT/syt5-gek1051-mobile-application-bormsche-shopping-liste/issues/11) |
 | 12  | Als User will ich die Einträge in meiner Einkaufsliste auch sehen, wenn ich keine Internetverbindung habe.                                                                                           | HOCJ | MH       | 40 Minuten | TODO   | [#12](https://github.com/TGM-HIT/syt5-gek1051-mobile-application-bormsche-shopping-liste/issues/12) |
+| 13  | Als User will ich die Sprachen Englisch und Deutsch für Texte zu Verfügung haben                                                                                                                     | DAMP | SH       |            | TODO   |                                                                                                     |
 
 Jonas Hochsteger: 4
 
