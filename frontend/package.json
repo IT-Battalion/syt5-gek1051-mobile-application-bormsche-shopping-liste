@@ -4,7 +4,7 @@
   "description": "Offline first shopping list app built with Vue.js and PouchDB",
   "main": "app.js",
   "scripts": {
-    "test": "../node_modules/.bin/karma start --single-run --browsers ChromeHeadless karma.conf.js",
+    "test": "karma start --single-run --browsers ChromeHeadless karma.conf.js",
     "start": "node app.js",
     "cypress:open": "cypress open"
   },
