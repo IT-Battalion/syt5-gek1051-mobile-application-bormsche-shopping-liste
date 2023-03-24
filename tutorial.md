@@ -36,20 +36,20 @@ We can leave our JavaScript and CSS files blank for now, but let's create a simp
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
-  <title>Shopping List</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+    <title>Shopping List</title>
 
-  <!-- our styles -->
-  <link href="shoppinglist.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+    <!-- our styles -->
+    <link href="frontend/shoppinglist.css" type="text/css" rel="stylesheet" media="screen,projection"/>
 </head>
 <body>
-   
-  <h1>Hello World</h1>
-  <!-- our code -->
-  <script src="shoppinglist.js"></script>
 
-  </body>
+<h1>Hello World</h1>
+<!-- our code -->
+<script src="frontend/shoppinglist.js"></script>
+
+</body>
 </html>
 ```
 
@@ -856,22 +856,22 @@ Your code should now look like [Tutorial Step 9 - Checkbox events](tutorial/step
 
 The final step in our tutorial is to make our application into a Progressive Web App (PWA). A PWA is web application that can be "installed" on a mobile device with an icon on the home screen, just like a native mobile app. To achieve this we need the following components:
 
-- a `manifest.json` in the same directory as your `index.html` file (copy [this one](manifest.json)). The manifest file contains your PWA's meta data including app name, icon urls and colour information.
-- a Service Worker, which is a JavaScript process dedicated to your app that controls all the web traffic your app initiates. This allows the Service Worker to cache assets for offline access. Copy [this one](worker.js)
-- some icons. Take [icon128x128.png](icon128x128.png) and [icon512x512.png](icon512x512.png)
+- a `manifest.json` in the same directory as your `index.html` file (copy [this one](frontend/manifest.json)). The manifest file contains your PWA's meta data including app name, icon urls and colour information.
+- a Service Worker, which is a JavaScript process dedicated to your app that controls all the web traffic your app initiates. This allows the Service Worker to cache assets for offline access. Copy [this one](frontend/worker.js)
+- some icons. Take [icon128x128.png](frontend/icon128x128.png) and [icon512x512.png](frontend/icon512x512.png)
 
 You'll also need some additional lines in the `<head>` section of your index.html:
 
 ```html
   <!-- mobile styling -->
-  <meta name="theme-color" content="#448AFF">
-  <meta name="mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="#448AFF">
-  <meta name="apple-mobile-web-app-title" content="Shopping List">
+<meta name="theme-color" content="#448AFF">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#448AFF">
+<meta name="apple-mobile-web-app-title" content="Shopping List">
 
-  <!-- PWA manifest -->
-  <link rel="manifest" href="manifest.json">
+<!-- PWA manifest -->
+<link rel="manifest" href="frontend/manifest.json">
 ```
 
 That's it! Your app is now installable on your mobile's home screen after visiting its URL in your web browser. 
