@@ -1,9 +1,9 @@
 version: "3.9"
 services:
-  web:
-    build: ./frontend
-    ports:
-      - "80:80"
+#  web:
+#    build: ./frontend
+#    ports:
+#      - "80:80"
   database:
     image: couchdb:2.1
     restart: always
@@ -14,4 +14,4 @@ services:
       - COUCHDB_PASSWORD=root
     volumes:
       - ./dbdata:/opt/couchdb/data
-      #- db.ini:/opt/couchdb/etc/local.d/db.ini
+      - ./docker.ini:/opt/couchdb/etc/local.d/docker.ini

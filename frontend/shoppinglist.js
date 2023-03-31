@@ -41,15 +41,15 @@ const sampleListItem = {
 const newestFirst = (a, b) => {
   if (a.createdAt > b.createdAt) return -1;
   if (a.createdAt < b.createdAt) return 1;
-  return 0 
+  return 0
 };
 
 /**
- * Perform an "AJAX" request i.e call the URL supplied with the 
+ * Perform an "AJAX" request i.e call the URL supplied with the
  * a querystring constructed from the supplied object
  *
- * @param  {String} url 
- * @param  {Object} querystring 
+ * @param  {String} url
+ * @param  {Object} querystring
  * @returns {Promise}
  */
 const ajax = function (url, querystring) {
@@ -114,7 +114,7 @@ var app = new Vue({
     /**
      * Calculates the counts of items and which items are checked
      * grouped by shopping list
-     * 
+     *
      * @returns {Object}
      */
     counts: function() {
@@ -135,7 +135,7 @@ var app = new Vue({
     /**
      * Calculates the shopping list but sorted into
      * date order - newest first
-     * 
+     *
      * @returns {Array}
      */
     sortedShoppingLists: function() {
@@ -144,7 +144,7 @@ var app = new Vue({
     /**
      * Calculates the shopping list items but sorted into
      * date order - newest first
-     * 
+     *
      * @returns {Array}
      */
     sortedShoppingListItems: function() {
@@ -158,8 +158,8 @@ var app = new Vue({
 
     // create database index on 'type'
     db.createIndex({ index: { fields: ['type'] }}).then(() => {
-      
-      // load all 'list' items 
+
+      // load all 'list' items
       var q = {
         selector: {
           type: 'list'
@@ -205,11 +205,11 @@ var app = new Vue({
      */
     onClickAbout: function() {
       this.mode = 'about';
-    },    
+    },
     /**
      * Saves 'doc' to PouchDB. It first checks whether that doc
      * exists in the database. If it does, it overwrites it - if
-     * it doesn't, it just writes it. 
+     * it doesn't, it just writes it.
      * @param {Object} doc
      * @returns {Promise}
      */
@@ -236,7 +236,7 @@ var app = new Vue({
     },
     /**
      * Called when the sync process is to start. Initiates a PouchDB to
-     * to Cloudant two-way sync and listens to the changes coming in
+     * Cloudant two-way sync and listens to the changes coming in
      * from the Cloudant feed. We need to monitor the incoming change
      * so that the Vue.js model is kept in sync.
      */
@@ -273,7 +273,7 @@ var app = new Vue({
             // locate the doc in our existing arrays
             var match = this.findDoc(arr, change._id);
 
-            // if we have it already 
+            // if we have it already
             if (match.doc) {
               // and it's a deletion
               if (change._deleted == true) {
@@ -305,8 +305,8 @@ var app = new Vue({
 
     /**
      * Given a list of docs and an id, find the doc in the list that has
-     * an '_id' (key) that matches the incoming id. Returns an object 
-     * with the 
+     * an '_id' (key) that matches the incoming id. Returns an object
+     * with the
      *   i - the index where the item was found
      *   doc - the matching document
      * @param {Array} docs
@@ -345,7 +345,7 @@ var app = new Vue({
 
       // if it exits
       if (doc) {
-        
+
         // modift the updated date
         doc.updatedAt = new Date().toISOString();
 
@@ -381,7 +381,7 @@ var app = new Vue({
 
     /**
      * Called when the Save Shopping List button is pressed.
-     * Writes the new list to PouchDB and adds it to the Vue 
+     * Writes the new list to PouchDB and adds it to the Vue
      * model's shoppingLists array
      */
     onClickSaveShoppingList: function() {
@@ -393,7 +393,7 @@ var app = new Vue({
       if (typeof this.singleList._rev === 'undefined') {
         this.shoppingLists.unshift(this.singleList);
       }
-      
+
       // write to database
       db.put(this.singleList).then((data) => {
         // keep the revision tokens
@@ -486,7 +486,7 @@ var app = new Vue({
     },
 
     /**
-     * Called when the Lookup button is pressed. We make an API call to 
+     * Called when the Lookup button is pressed. We make an API call to
      * OpenStreetMap passing in the user-supplied name of the place. If
      * the API returns something, the options are added to Vue's "places"
      * array and become a pull-down list of options on the front end.
@@ -497,7 +497,7 @@ var app = new Vue({
       var url = 'https://nominatim.openstreetmap.org/search';
       var qs = {
         format: 'json',
-        addressdetails: 1, 
+        addressdetails: 1,
         namedetails: 1,
         q: this.singleList.place.title
       };
@@ -519,7 +519,7 @@ var app = new Vue({
     // and copy the lat/long, licence and name over to our database
     /**
      * Called when an item is selected from the places pull-down list. The
-     * place is found in the "places" array and its lat/long, licnece and 
+     * place is found in the "places" array and its lat/long, licnece and
      * address are moved to the Vue object linked with the front-end form.
      * @param {String} v
      */
