@@ -8,6 +8,7 @@ Team: [Philip Damianik](https://github.com/pdamianik) (Leader), [Patrick Elias](
 
 Stories: [STORIES.md](STORIES.md)
 
+Mitarbeiten: [CONTRIBUTING.md](CONTRIBUTING.md)
 
 Doku: auf [Overleaf](https://www.overleaf.com/read/qbvwhkwmxrkt)
 
