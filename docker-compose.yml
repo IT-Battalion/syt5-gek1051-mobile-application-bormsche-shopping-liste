@@ -9,9 +9,17 @@ services:
     restart: always
     ports:
       - "5984:5984"
-    environment:
-      - COUCHDB_USER=root
-      - COUCHDB_PASSWORD=root
+    env_file: ${ENV_FILE:-config.env}
     volumes:
       - ./dbdata:/opt/couchdb/data
-      - ./docker.ini:/opt/couchdb/etc/local.d/docker.ini
+      - ./local.ini:/opt/couchdb/etc/local.ini
+  db-init:
+    image: alpine:3
+    command: >
+      sh -c "apk add curl && sh /couchdb-init.sh"
+    depends_on:
+      database:
+        condition: service_started
+    env_file: ${ENV_FILE:-config.env}
+    volumes:
+        - ./couchdb-init.sh:/couchdb-init.sh

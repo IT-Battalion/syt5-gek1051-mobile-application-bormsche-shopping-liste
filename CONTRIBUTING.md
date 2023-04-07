@@ -11,22 +11,14 @@ npm install
 npm start
 ```
 
-Die Couchdb Datenbank lässt sich über das docker-compose.yml file starten
-
-Für den Fall, dass die Datenbank vom Frontend nicht erreichbar ist aufgrund eines CORS errors, muss CORS aktiviert werden:
-
-1. In Config auf CORS clicken
-
-![img.png](images/cors.png)
-
-2. Enable CORS clicken
-
-![img.png](images/domains.png)
-
-3. Die erlaubten Domains eingeben
+Die Datenbank wird durch das docker.ini file initialisiert. Damit das Singlenode Setup abgeschlossen wird müssen noch
+die User Tabellen angelegt werden, dies wird durch den db-init container, welcher ein shell Script (couchdb-init.sh) zum Anlegen der
+Tabellen ausführt.
 
 ## Testing
+
 Zum Testen des Projektes wird Cypress verwendet. Zum Starten von Cypress wird folgender Befehl ausgeführt:
+
 ```bash
 npm run cypress:open
 ```
