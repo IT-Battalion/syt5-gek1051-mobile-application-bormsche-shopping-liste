@@ -18,7 +18,7 @@ npm start
 Die Datenbank kann durch das docker-compose file gestartet werden:
 
 ```bash
-docker compose up
+docker compose up -d database db-init
 ```
 
 Die Datenbank wird durch das docker.ini file initialisiert. Damit das Singlenode Setup abgeschlossen wird müssen noch
@@ -32,3 +32,7 @@ Zum Testen des Projektes wird Cypress verwendet. Zum Starten von Cypress wird fo
 ```bash
 npm run cypress:open
 ```
+
+## Deployment
+
+Das Deployment wird über das docker-compose File erledigt. Dieses wird in Verbindung mit benötigten *.env, *.ini und *.sh files auf den Server geladen.

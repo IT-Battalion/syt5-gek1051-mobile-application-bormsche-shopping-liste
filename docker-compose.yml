@@ -1,9 +1,10 @@
 version: "3.9"
 services:
-#  web:
-#    build: ./frontend
-#    ports:
-#      - "80:80"
+  frontend:
+    image: ghcr.io/TGM-HIT/syt5-gek1051-mobile-application-bormsche-shopping-liste
+    build: ./frontend
+    ports:
+      - "80:80"
   database:
     image: couchdb:2.1
     restart: always
@@ -11,7 +12,7 @@ services:
       - "5984:5984"
     env_file: ${ENV_FILE:-config.env}
     volumes:
-      - ./dbdata:/opt/couchdb/data
+      - dbdata:/opt/couchdb/data
       - ./local.ini:/opt/couchdb/etc/local.ini
   db-init:
     image: alpine:3
@@ -23,3 +24,5 @@ services:
     env_file: ${ENV_FILE:-config.env}
     volumes:
         - ./couchdb-init.sh:/couchdb-init.sh
+volumes:
+  dbdata:
