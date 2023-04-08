@@ -182,7 +182,7 @@
             </md-list-item>
 
             <!-- shopping list items -->
-            <md-list-item v-for="(item,k) in sortedShoppingListItems" :key="item._id" v-if="item.list == currentListId"
+            <md-list-item v-for="(item,k) in sortedShoppingListItems" :key="item._id" :id="k + '_item_det'" v-if="item.list == currentListId"
                           v-on:click="onItemClick(item._id)">
 
                 <!-- checkbox against each item -->

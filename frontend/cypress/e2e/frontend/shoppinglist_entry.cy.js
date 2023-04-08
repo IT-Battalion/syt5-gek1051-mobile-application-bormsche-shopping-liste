@@ -36,6 +36,14 @@ describe('shopping list entry', () => {
     cy.get('#add_item_input').type("! § $ % & / ( ) = ? ` * # ~ ’ ¸ ¹ ² ³ ¼ ½ ¬ \{ \[ \] \} \\ _ : ; – … · , . - µ @ ", {parseSpecialCharSequences: false})
     cy.get('#add_item_btn').click();
     cy.get('#item_list').children().should('have.length.above', 1)
-    cy.wait(500)
+    cy.wait(1000)
+  });
+
+  it('shows Detail for item', () => {
+    cy.get('#0_item_det').click();
+    cy.wait(1000);
+    cy.get('#close_detail').click();
+    cy.get('#0_item_delete').click()
+    cy.get('#item_list').children().should('have.length.below', 2)
   });
 })
