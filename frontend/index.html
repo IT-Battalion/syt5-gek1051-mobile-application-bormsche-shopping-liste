@@ -73,20 +73,20 @@
           <!-- shopping list name -->
           <md-input-container>
             <label>List name</label>
-            <md-input placeholder="e.g. Food" v-model="singleList.title"></md-input>
+            <md-input id="list_name" placeholder="e.g. Food" v-model="singleList.title"></md-input>
           </md-input-container>
 
           <!-- shopping place name -->
           <md-input-container>
             <label>Place name</label>
-            <md-input placeholder="e.g. Whole Foods, Reno" v-model="singleList.place.title"></md-input>
-            <md-button class="md-raised" v-bind:disabled="singleList.place.title.length==0" v-on:click="onClickLookup">Lookup</md-button>
+            <md-input id="place_name" placeholder="e.g. Whole Foods, Reno" v-model="singleList.place.title"></md-input>
+            <md-button id="lookup" class="md-raised" v-bind:disabled="singleList.place.title.length==0" v-on:click="onClickLookup">Lookup</md-button>
           </md-input-container>
 
           <!-- shopping place pull-down list -->
           <md-input-container v-if="places.length > 1">
-            <label for="movie">Choose address</label>
-            <md-select v-bind="selectedPlace" v-on:change="onChangePlace" v-bind:disabled="places.length == 0">
+            <label for="places">Choose address</label>
+            <md-select id="places" v-bind="selectedPlace" v-on:change="onChangePlace" v-bind:disabled="places.length == 0">
               <md-option v-for="place in places" :key="place.place_id" v-bind:value="place.place_id">{{ place.display_name }}</md-option>
             </md-select>
           </md-input-container>
@@ -268,7 +268,7 @@
 
       <!-- floating 'add shopping list' button -->
       <div class="floatingbutton" v-if="mode == 'showlist'">
-        <md-button class="md-fab md-primary md-raised" v-on:click="onClickAddShoppingList">
+        <md-button class="md-fab md-primary md-raised" id="add_entry" v-on:click="onClickAddShoppingList">
           <md-icon>add</md-icon>
         </md-button>
       </div> <!-- floating 'add shopping list' button -->
