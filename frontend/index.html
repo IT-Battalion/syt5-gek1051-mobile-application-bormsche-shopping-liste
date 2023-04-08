@@ -41,6 +41,11 @@
         <!-- page title -->
         <h2 class="md-title" style="flex: 1">{{ pagetitle }}</h2>
 
+        <!-- visualisation of sync status -->
+        <md-chip v-if="syncStatus == 'notsyncing'">Not Syncing</md-chip>
+        <md-chip v-if="syncStatus == 'syncing'" class="md-primary">Syncing</md-chip>
+        <md-chip v-if="syncStatus == 'syncerror'" class="md-warn">Sync Error</md-chip>
+
         <!-- save new shopping list button -->
         <md-button class="md-icon-button" v-if="mode == 'addlist'" v-on:click="onClickSaveShoppingList" v-bind:disabled="singleList.title.length == 0">
           <md-icon>check</md-icon>
