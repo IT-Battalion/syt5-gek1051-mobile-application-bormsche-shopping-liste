@@ -163,7 +163,7 @@
 
           <!-- checkbox against each item -->
           <div>
-            <md-checkbox v-model="item.checked" class="md-primary" v-on:change="onCheckListItem(item._id)"></md-checkbox>
+            <md-checkbox :id="k + '_item_check'" v-model="item.checked" class="md-primary" v-on:change="onCheckListItem(item._id)"></md-checkbox>
           </div>
 
           <!-- shopping list item title -->
