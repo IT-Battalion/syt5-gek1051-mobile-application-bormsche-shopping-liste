@@ -20,6 +20,14 @@ describe('shopping list entry', () => {
     cy.wait(500)
   });
 
+  it('mark as unbought', () => {
+    cy.get('#0_add').click()
+    cy.get('#item_list').children().should('have.length.above', 1)
+    cy.get('#0_item_check').uncheck({force:true})
+    cy.get('#0_item_check').should('have.value', 'false')
+    cy.wait(500)
+  });
+
   it('delete item', () => {
     cy.get('#0_add').click()
     cy.get('#item_list').children().should('have.length.above', 1)
