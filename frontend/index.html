@@ -47,7 +47,7 @@
         <md-chip v-if="syncStatus == 'syncerror'" class="md-warn">Sync Error</md-chip>
 
         <!-- save new shopping list button -->
-        <md-button class="md-icon-button" v-if="mode == 'addlist'" v-on:click="onClickSaveShoppingList" v-bind:disabled="singleList.title.length == 0">
+        <md-button id="create_shopping_list" class="md-icon-button" v-if="mode == 'addlist'" v-on:click="onClickSaveShoppingList" v-bind:disabled="singleList.title.length == 0">
           <md-icon>check</md-icon>
         </md-button>
 
@@ -73,20 +73,20 @@
           <!-- shopping list name -->
           <md-input-container>
             <label>List name</label>
-            <md-input placeholder="e.g. Food" v-model="singleList.title"></md-input>
+            <md-input id="list_name" placeholder="e.g. Food" v-model="singleList.title"></md-input>
           </md-input-container>
 
           <!-- shopping place name -->
           <md-input-container>
             <label>Place name</label>
-            <md-input placeholder="e.g. Whole Foods, Reno" v-model="singleList.place.title"></md-input>
-            <md-button class="md-raised" v-bind:disabled="singleList.place.title.length==0" v-on:click="onClickLookup">Lookup</md-button>
+            <md-input id="place_name" placeholder="e.g. Whole Foods, Reno" v-model="singleList.place.title"></md-input>
+            <md-button id="lookup" class="md-raised" v-bind:disabled="singleList.place.title.length==0" v-on:click="onClickLookup">Lookup</md-button>
           </md-input-container>
 
           <!-- shopping place pull-down list -->
           <md-input-container v-if="places.length > 1">
-            <label for="movie">Choose address</label>
-            <md-select v-bind="selectedPlace" v-on:change="onChangePlace" v-bind:disabled="places.length == 0">
+            <label for="places">Choose address</label>
+            <md-select id="places" v-bind="selectedPlace" v-on:change="onChangePlace" v-bind:disabled="places.length == 0">
               <md-option v-for="place in places" :key="place.place_id" v-bind:value="place.place_id">{{ place.display_name }}</md-option>
             </md-select>
           </md-input-container>
@@ -143,23 +143,23 @@
       </md-card> <!-- add new shopping list form -->
 
       <!-- shopping list item editor -->
-      <md-list class="itemedit" v-if="mode == 'itemedit'">
+      <md-list id="item_list" class="itemedit" v-if="mode == 'itemedit'">
 
         <!-- shopping list item add form -->
         <md-list-item>
           <!-- shopping item title -->
           <md-input-container>
-            <md-input v-model="newItemTitle" placeholder="New item e.g. eggs" @keyup.enter.native="onAddListItem"></md-input>
+            <md-input id="add_item_input" v-model="newItemTitle" placeholder="New item e.g. eggs" @keyup.enter.native="onAddListItem"></md-input>
           </md-input-container>
 
           <!-- shopping item add button -->
-          <md-button class="md-icon-button md-list-action" v-on:click="onAddListItem" v-bind:disabled="newItemTitle.length == 0">
+          <md-button id="add_item_btn" class="md-icon-button md-list-action" v-on:click="onAddListItem" v-bind:disabled="newItemTitle.length == 0">
             <md-icon class="md-primary">add_shopping_cart</md-icon>
           </md-button>
         </md-list-item>
 
         <!-- shopping list items -->
-        <md-list-item v-for="item in sortedShoppingListItems" :key="item._id" v-if="item.list == currentListId">
+        <md-list-item v-for="(item,k) in sortedShoppingListItems" :key="item._id" v-if="item.list == currentListId">
 
           <!-- checkbox against each item -->
           <div>
@@ -172,7 +172,7 @@
           </div>
 
           <!-- shopping list item delete button -->
-          <md-button v-on:click="onDeleteItem(item._id)" class="md-icon-button md-list-action">
+          <md-button :id="k + '_item_delete'" v-on:click="onDeleteItem(item._id)" class="md-icon-button md-list-action">
             <md-icon>cancel</md-icon>
           </md-button>
 
@@ -181,8 +181,8 @@
       </md-list> <!-- shopping list item editor -->
 
       <!-- list of shopping lists -->
-      <md-list v-if="mode == 'showlist'">
-        <md-card v-for="list in sortedShoppingLists" :key="list._id" :data-id="list._id">
+      <md-list v-if="mode == 'showlist'" id="shopping_list">
+        <md-card v-for="(list,k) in sortedShoppingLists" :key="list._id" :data-id="list._id">
           <md-card-header>
             <!-- shopping list title -->
             <div class="md-title" v-bind:class="{ cardchecked: list.checked}">{{ list.title }}</div>
@@ -218,7 +218,7 @@
 
           <md-card-actions>
             <!-- button to edit the list items -->
-            <md-button v-on:click="onClickList(list._id, list.title)">
+            <md-button :id="k + '_add'" v-on:click="onClickList(list._id, list.title)">
                 <md-icon>chevron_right</md-icon>
             </md-button>
           </md-card-actions>
@@ -268,7 +268,7 @@
 
       <!-- floating 'add shopping list' button -->
       <div class="floatingbutton" v-if="mode == 'showlist'">
-        <md-button class="md-fab md-primary md-raised" v-on:click="onClickAddShoppingList">
+        <md-button class="md-fab md-primary md-raised" id="add_entry" v-on:click="onClickAddShoppingList">
           <md-icon>add</md-icon>
         </md-button>
       </div> <!-- floating 'add shopping list' button -->
