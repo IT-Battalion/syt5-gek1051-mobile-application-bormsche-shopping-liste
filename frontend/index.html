@@ -143,23 +143,23 @@
       </md-card> <!-- add new shopping list form -->
 
       <!-- shopping list item editor -->
-      <md-list class="itemedit" v-if="mode == 'itemedit'">
+      <md-list id="item_list" class="itemedit" v-if="mode == 'itemedit'">
 
         <!-- shopping list item add form -->
         <md-list-item>
           <!-- shopping item title -->
           <md-input-container>
-            <md-input v-model="newItemTitle" placeholder="New item e.g. eggs" @keyup.enter.native="onAddListItem"></md-input>
+            <md-input id="add_item_input" v-model="newItemTitle" placeholder="New item e.g. eggs" @keyup.enter.native="onAddListItem"></md-input>
           </md-input-container>
 
           <!-- shopping item add button -->
-          <md-button class="md-icon-button md-list-action" v-on:click="onAddListItem" v-bind:disabled="newItemTitle.length == 0">
+          <md-button id="add_item_btn" class="md-icon-button md-list-action" v-on:click="onAddListItem" v-bind:disabled="newItemTitle.length == 0">
             <md-icon class="md-primary">add_shopping_cart</md-icon>
           </md-button>
         </md-list-item>
 
         <!-- shopping list items -->
-        <md-list-item v-for="item in sortedShoppingListItems" :key="item._id" v-if="item.list == currentListId">
+        <md-list-item v-for="(item,k) in sortedShoppingListItems" :key="item._id" v-if="item.list == currentListId">
 
           <!-- checkbox against each item -->
           <div>
@@ -172,7 +172,7 @@
           </div>
 
           <!-- shopping list item delete button -->
-          <md-button v-on:click="onDeleteItem(item._id)" class="md-icon-button md-list-action">
+          <md-button :id="k + '_item_delete'" v-on:click="onDeleteItem(item._id)" class="md-icon-button md-list-action">
             <md-icon>cancel</md-icon>
           </md-button>
 
@@ -181,8 +181,8 @@
       </md-list> <!-- shopping list item editor -->
 
       <!-- list of shopping lists -->
-      <md-list v-if="mode == 'showlist'">
-        <md-card v-for="list in sortedShoppingLists" :key="list._id" :data-id="list._id">
+      <md-list v-if="mode == 'showlist'" id="shopping_list">
+        <md-card v-for="(list,k) in sortedShoppingLists" :key="list._id" :data-id="list._id">
           <md-card-header>
             <!-- shopping list title -->
             <div class="md-title" v-bind:class="{ cardchecked: list.checked}">{{ list.title }}</div>
@@ -218,7 +218,7 @@
 
           <md-card-actions>
             <!-- button to edit the list items -->
-            <md-button v-on:click="onClickList(list._id, list.title)">
+            <md-button :id="k + '_add'" v-on:click="onClickList(list._id, list.title)">
                 <md-icon>chevron_right</md-icon>
             </md-button>
           </md-card-actions>
