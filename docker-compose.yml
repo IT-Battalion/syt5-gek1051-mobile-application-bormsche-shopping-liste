@@ -1,8 +1,8 @@
 version: "3.9"
 services:
   frontend:
-    image: ghcr.io/TGM-HIT/syt5-gek1051-mobile-application-bormsche-shopping-liste
-    build: ./frontend
+    image: ghcr.io/tgm-hit/syt5-gek1051-mobile-application-bormsche-shopping-liste:${TAG:-main}
+    build: ./frontend/
     ports:
       - "80:80"
   database:
