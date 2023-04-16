@@ -29,7 +29,7 @@
 
 <!-- Vue app -->
 <div id="app" class="app-viewport" v-cloak>
-
+    <div id="ptr"></div>
     <!-- top bar -->
     <md-whiteframe md-elevation="3" class="main-toolbar">
         <md-toolbar>
@@ -338,5 +338,14 @@
 <!-- our code -->
 <script src="shoppinglist.js"></script>
 
+<script src="node_modules/pull-to-reload/pull-to-reload.min.js">
+    var ptr = new PullToReload({
+        'callback-loading': function(){
+            setTimeout(function(){
+                ptr.loadingEnd();
+            }, 5000);
+        }
+    });
+</script>
 </body>
 </html>
