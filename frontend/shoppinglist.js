@@ -26,6 +26,7 @@ const sampleListItem = {
     "version": 1,
     "title": "",
     "checked": false,
+    "note": "",
     "createdAt": "",
     "updatedAt": ""
 };
@@ -99,6 +100,7 @@ var app = new Vue({
     data: {
         mode: 'showlist',
         detail: false,
+        detailEdit: false,
         currDetail: null,
         pagetitle: 'Shopping Lists',
         shoppingLists: [],
@@ -152,7 +154,7 @@ var app = new Vue({
          */
         sortedShoppingListItems: function () {
             return this.shoppingListItems.sort(newestFirst);
-        }
+        },
     },
     /**
      * Called once when the app is first loaded
@@ -550,10 +552,21 @@ var app = new Vue({
                 this.shoppingListItems.splice(match.i, 1);
             });
         },
+
         onItemClick: function (id) {
             var match = this.findDoc(this.shoppingListItems, id);
             this.detail = true;
             this.currDetail = match;
+        },
+
+        closeDetail: function (id) {
+            this.detail = false;
+            this.detailEdit = false;
+            this.findUpdateDoc(this.shoppingListItems, id);
+        },
+
+        compileMarkdown: function(text) {
+            return marked(text, {sanitize: true})
         },
     }
 })

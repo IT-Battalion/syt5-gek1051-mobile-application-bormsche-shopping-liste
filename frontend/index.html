@@ -158,7 +158,12 @@
                     <span>{{currDetail.doc.checked}}</span>
                     <h2>Erstellt am: </h2>
                     <span>{{currDetail.doc.createdAt}}</span>
-                    <md-button id="close_detail" v-on:click="detail = false">Schließen</md-button>
+                    <div v-html="compileMarkdown(currDetail.doc.note)" v-if="!detailEdit" v-on:click="detailEdit = true"></div>
+                    <md-input-container v-if="detailEdit">
+                        <label>Notizen</label>
+                        <md-textarea id="note_detail" v-model="currDetail.doc.note"></md-textarea>
+                    </md-input-container>
+                    <md-button id="close_detail" v-on:click="closeDetail(currDetail.doc._id)">Schließen</md-button>
                 </md-card-content>
             </md-card>
         </div>
@@ -334,6 +339,8 @@
 
 <!-- vue-material - Material Design for Vue.js -->
 <script src="https://unpkg.com/vue-material@0.7.4/dist/vue-material.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@3.0.7/marked.min.js"></script>
 
 <!-- our code -->
 <script src="shoppinglist.js"></script>
