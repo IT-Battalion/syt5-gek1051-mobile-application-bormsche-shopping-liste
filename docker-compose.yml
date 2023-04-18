@@ -1,28 +1,10 @@
 version: "3.9"
 services:
-  frontend:
-    image: ghcr.io/tgm-hit/syt5-gek1051-mobile-application-bormsche-shopping-liste:${TAG:-main}
-    build: ./frontend/
-    ports:
-      - "80:80"
   database:
-    image: couchdb:2.1
-    restart: always
+    image: test-database
     ports:
       - "5984:5984"
-    env_file: ${ENV_FILE:-config.env}
-    volumes:
-      - dbdata:/opt/couchdb/data
-      - ./local.ini:/opt/couchdb/etc/local.ini
-  db-init:
-    image: alpine:3
-    command: >
-      sh -c "apk add curl && sh /couchdb-init.sh"
-    depends_on:
-      database:
-        condition: service_started
-    env_file: ${ENV_FILE:-config.env}
-    volumes:
-        - ./couchdb-init.sh:/couchdb-init.sh
-volumes:
-  dbdata:
+  app:
+    image: test-app
+    ports:
+      - "8081:80"

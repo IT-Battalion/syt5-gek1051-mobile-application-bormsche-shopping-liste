@@ -1,5 +1,13 @@
-FROM nginx:1
+FROM node:current-alpine
 
-COPY index.html shoppinglist.js shoppinglist.css worker.js manifest.json /usr/share/nginx/html/
+WORKDIR /usr/src/app
+
+COPY package.json ./
+
+RUN npm install
+
+COPY . .
 
 EXPOSE 80
+EXPOSE 8081
+CMD ["npm", "run", "start"]
