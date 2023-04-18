@@ -7,4 +7,4 @@ services:
   app:
     image: test-app
     ports:
-      - "8081:80"
+      - "80:8081"
